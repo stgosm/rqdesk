@@ -1,7 +1,9 @@
 import React from 'react';
-import '../css/App.css';
 import Request from './Request'
 import rqdata from '../assets/requerimientos.json';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+
 
 class Requirements extends React.Component {
   state = {
@@ -14,9 +16,13 @@ class Requirements extends React.Component {
 
   render(){
     return(
-      this.state.requirements.map(rq => 
-        <Request key={ rq.id } {...rq} />
-      )
+      <Container fixed>
+        {
+          this.state.requirements.map(rq => 
+            <Request key={ rq.id } {...rq} />
+          )
+        }
+      </Container>
     )
   }
 }
