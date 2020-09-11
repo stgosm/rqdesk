@@ -14,9 +14,9 @@ function Requirements() {
     async function getRequirements() {
       try {
         const data = await fetch('http://localhost:3000/requiriments')
-        const dataRequiriments = await data.json()
+        const dataRequirements = await data.json()
 
-        setRequirements(dataRequiriments)
+        setRequirements(dataRequirements)
         
       } catch(e) {
         console.error(e);
