@@ -11,18 +11,18 @@ const useStyle = makeStyles({
     },
 })
 
-function Request({ name, area, description }) {
+function Request({ rqName, rqArea, rqDescription }) {
     const classes = useStyle();
     return (
         <Card className={ classes.cardRequest }>
             <Typography variant='h6'>
-                { name }
+                { rqName }
             </Typography>
             <Typography variant="overline" color='secondary'>
-                { area }
+                { rqArea.areaName }
             </Typography>
             <Typography variant="body1">
-                { description }
+                { rqDescription }
             </Typography>
         </Card>           
   )
